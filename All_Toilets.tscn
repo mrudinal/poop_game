@@ -1,0 +1,413 @@
+[gd_scene load_steps=5 format=3 uid="uid://70w7grj8omyh"]
+
+[ext_resource type="PackedScene" uid="uid://dgoa4r1m371sp" path="res://toilets.tscn" id="1_mr6ub"]
+[ext_resource type="Script" uid="uid://cxnfict42r1vd" path="res://toilet_down_faster.gd" id="2_q335u"]
+[ext_resource type="Script" uid="uid://rknd8s4jogsb" path="res://toilet_up.gd" id="3_q335u"]
+[ext_resource type="Script" uid="uid://ctkorocp82218" path="res://toilet_down.gd" id="4_wkip5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Toilet9" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(570, 155)
+rotation = -3.14159
+
+[node name="Toilet34" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(570, 615)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(990, 405)
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet22" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2040, 820)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D3" type="Line2D" parent="Toilet22"]
+z_index = 5
+position = Vector2(0, -496)
+scale = Vector2(-1, -1)
+points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet26" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2250, 760)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D4" type="Line2D" parent="Toilet26"]
+z_index = 5
+position = Vector2(11, -469)
+rotation = 3.14159
+points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet27" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2460, 380)
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet47" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4655, 370)
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet2" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2460, -80)
+rotation = 3.14159
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D3" type="Line2D" parent="Toilet2"]
+z_index = 5
+position = Vector2(6.00013, -474)
+rotation = -3.14159
+points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet50" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(5915, 438)
+script = ExtResource("2_q335u")
+trigger_distance_x = 200.0
+drop_amount = 350.0
+drop_speed = 3000.0
+player_path = NodePath("")
+
+[node name="Toilet12" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(5516, -80)
+rotation = 3.14159
+script = ExtResource("2_q335u")
+trigger_distance_x = 200.0
+drop_amount = 350.0
+drop_speed = 3000.0
+player_path = NodePath("")
+
+[node name="Line2D3" type="Line2D" parent="Toilet12"]
+z_index = 5
+position = Vector2(6.00013, -474)
+rotation = -3.14159
+points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet3" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4446, 585)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet4" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(990, -55)
+rotation = 3.14159
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D2" type="Line2D" parent="Toilet4"]
+z_index = 5
+position = Vector2(6.10352e-05, -460)
+rotation = -3.14159
+points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet32" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3151, -80)
+rotation = 3.14159
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D4" type="Line2D" parent="Toilet32"]
+z_index = 5
+position = Vector2(-2, -468)
+rotation = -3.14159
+points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet46" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4655, -90)
+rotation = 3.14159
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D4" type="Line2D" parent="Toilet46"]
+z_index = 5
+position = Vector2(-2, -486)
+rotation = -3.14159
+points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet38" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3606, 364)
+rotation = 3.14159
+scale = Vector2(0.987785, 1)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet23" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2040, 360)
+rotation = 3.14159
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet5" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1620, 605)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet20" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1830, 685)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet6" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(6960, 641)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet7" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(8786, 684)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet8" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(780, 545)
+
+[node name="Toilet35" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3360, 790)
+scale = Vector2(0.987785, 1)
+
+[node name="Toilet33" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3151, 730)
+
+[node name="Toilet48" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(5075, -90)
+rotation = 3.14159
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D4" type="Line2D" parent="Toilet48"]
+z_index = 5
+position = Vector2(-2, -468)
+rotation = -3.14159
+points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet49" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(5075, 727)
+
+[node name="Toilet30" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2891, -80)
+rotation = -3.14159
+
+[node name="Toilet29" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2670, 380)
+rotation = -3.14159
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet16" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(780, 85)
+rotation = -3.14159
+
+[node name="Toilet36" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(780, 85)
+rotation = -3.14159
+
+[node name="Toilet37" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3360, 330)
+rotation = -3.14159
+scale = Vector2(-0.987785, 1)
+
+[node name="Toilet28" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1200, 285)
+rotation = -3.14159
+
+[node name="Toilet10" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(570, 615)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet40" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4026, 664)
+scale = Vector2(0.987785, 1)
+
+[node name="Toilet41" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3816, 89)
+rotation = -3.14159
+scale = Vector2(0.987785, 1)
+
+[node name="Toilet42" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4026, 204)
+rotation = -3.14159
+scale = Vector2(0.987785, 1)
+
+[node name="Toilet44" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4236, 819)
+scale = Vector2(0.987785, 1)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D6" type="Line2D" parent="Toilet44"]
+z_index = 5
+position = Vector2(4.0493, -485)
+rotation = -3.14159
+scale = Vector2(1.01237, 1)
+points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet45" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4236, 359)
+rotation = -3.14159
+scale = Vector2(0.987785, 1)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet43" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3816, 549)
+rotation = -3.14159
+scale = Vector2(0.987785, -1)
+
+[node name="Toilet51" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(5511, 705)
+rotation = -3.14159
+scale = Vector2(0.987785, -1)
+
+[node name="Toilet39" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3606, 824)
+rotation = -3.14159
+scale = Vector2(0.987785, -1)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D7" type="Line2D" parent="Toilet39"]
+z_index = 5
+position = Vector2(-7.08691, -469)
+scale = Vector2(1.01237, -1)
+points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet15" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2670, 840)
+rotation = -3.14159
+scale = Vector2(1, -1)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D5" type="Line2D" parent="Toilet15"]
+z_index = 5
+position = Vector2(-3.99999, -511)
+scale = Vector2(1, -1)
+points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet31" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2891, 730)
+rotation = -3.14159
+scale = Vector2(1, -1)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D6" type="Line2D" parent="Toilet31"]
+z_index = 5
+position = Vector2(-7.99998, -469)
+scale = Vector2(1, -1)
+points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
+[node name="Toilet24" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1200, 745)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet17" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1410, 550)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet11" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4865, 630)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet13" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4865, 147)
+rotation = -3.14159
+
+[node name="Toilet18" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1410, 90)
+rotation = -3.14159
+
+[node name="Toilet25" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1620, 145)
+rotation = -3.14159
+
+[node name="Toilet19" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(1830, 225)
+rotation = -3.14159
+
+[node name="Toilet21" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(2250, 300)
+rotation = -3.14159
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet14" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(4446, 125)
+rotation = -3.14159

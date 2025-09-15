@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddjv4axpwg04n"]
+
+[ext_resource type="Texture2D" uid="uid://b6wugyv8wfa7f" path="res://backgrounds/poop background.png" id="1_4hvwq"]
+[ext_resource type="Script" uid="uid://mv8e6tfb1o6j" path="res://full_background.gd" id="1_yj6ml"]
+[ext_resource type="PackedScene" uid="uid://70w7grj8omyh" path="res://All_Toilets.tscn" id="3_8y2al"]
+
+[node name="Background_Toilets" type="Node2D"]
+
+[node name="Full_Background" type="Node2D" parent="."]
+script = ExtResource("1_yj6ml")
+shake_with_me = Array[NodePath]([NodePath("../Toilets")])
+
+[node name="PoopBackground" type="Sprite2D" parent="Full_Background"]
+position = Vector2(661, 514)
+texture = ExtResource("1_4hvwq")
+
+[node name="PoopBackground2" type="Sprite2D" parent="Full_Background"]
+position = Vector2(2040, 473)
+texture = ExtResource("1_4hvwq")
+
+[node name="PoopBackground3" type="Sprite2D" parent="Full_Background"]
+position = Vector2(3572, 473)
+texture = ExtResource("1_4hvwq")
+
+[node name="PoopBackground4" type="Sprite2D" parent="Full_Background"]
+position = Vector2(5092, 473)
+texture = ExtResource("1_4hvwq")
+
+[node name="Toilets" parent="." instance=ExtResource("3_8y2al")]
