@@ -5,7 +5,6 @@ extends Node2D
 @export var image_width: float = 1280.0
 
 # Earthquakes variables
-@export var quake_start_times: Array[float] = [19.6,66.4] 
 @export var quake_duration: float = 4.0           
 @export var quake_amplitude: float = 150.0
 @export var quake_hz: float = 2.0
@@ -52,7 +51,7 @@ func _process(delta: float) -> void:
 	var best_t_since_start := 0.0
 
 	# Setting earthquake functionality
-	for start_time in quake_start_times:
+	for start_time in Variables.quake_start_times:
 		if _elapsed >= start_time:
 			var end_time := start_time + quake_duration
 			var fade_start := end_time - quake_fade_s

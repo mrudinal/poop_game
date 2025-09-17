@@ -14,7 +14,7 @@ var _target_y := 0.0
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		print("Player hit the toilet!")
-		#get_tree().reload_current_scene()
+		Variables.reset()
 
 func _ready() -> void:
 	_initial_y = global_position.y

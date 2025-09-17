@@ -1,7 +1,6 @@
 extends Node2D
 
 # --- Blink (blackout) settings ---
-@export var blink_start_times: Array[float] = [23.6]  
 @export var blink_duration: float = 4.0             
 @export var blink_hz: float = 2.0	#blinks per second            
 
@@ -41,7 +40,7 @@ func _process(delta: float) -> void:
 	# Find if we are inside any blink window
 	var active := false
 	var t0 := 0.0
-	for s in blink_start_times:
+	for s in Variables.blink_start_times:
 		if _elapsed >= s and _elapsed < s + blink_duration:
 			active = true
 			t0 = s

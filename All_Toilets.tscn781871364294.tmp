@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://70w7grj8omyh"]
+[gd_scene load_steps=5 format=3 uid="uid://70w7grj8omyh"]
 
 [ext_resource type="PackedScene" uid="uid://dgoa4r1m371sp" path="res://toilets.tscn" id="1_mr6ub"]
 [ext_resource type="Script" uid="uid://cxnfict42r1vd" path="res://toilet_down_faster.gd" id="2_q335u"]
 [ext_resource type="Script" uid="uid://rknd8s4jogsb" path="res://toilet_up.gd" id="3_q335u"]
 [ext_resource type="Script" uid="uid://ctkorocp82218" path="res://toilet_down.gd" id="4_wkip5"]
-[ext_resource type="Script" uid="uid://d6g475bb7l1k" path="res://toilet_up_faster.gd" id="5_kbbdq"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -191,43 +190,6 @@ scale = Vector2(1, -1)
 points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
 default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
 
-[node name="Toilet13A" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(3076, -74)
-rotation = -3.14159
-
-[node name="Toilet13B" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(3076, 736)
-rotation = -3.14159
-scale = Vector2(1, -1)
-script = ExtResource("3_q335u")
-trigger_distance_x = 150.0
-up_amount = 350.0
-up_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Line2D6" type="Line2D" parent="Toilet13B"]
-z_index = 5
-position = Vector2(-7.99998, -469)
-scale = Vector2(1, -1)
-points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
-[node name="Toilet14A" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(3306, -74)
-rotation = 3.14159
-script = ExtResource("4_wkip5")
-trigger_distance_x = 150.0
-drop_amount = 350.0
-drop_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Line2D4" type="Line2D" parent="Toilet14A"]
-z_index = 5
-position = Vector2(-2, -468)
-rotation = -3.14159
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
 [node name="Toilet34" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(570, 615)
 rotation = -3.14159
@@ -242,7 +204,7 @@ drop_speed = 2000.0
 player_path = NodePath("")
 
 [node name="Toilet50" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6170, 450)
+position = Vector2(6170, 444)
 script = ExtResource("2_q335u")
 trigger_distance_x = 200.0
 drop_amount = 350.0
@@ -250,7 +212,7 @@ drop_speed = 3000.0
 player_path = NodePath("")
 
 [node name="Toilet12" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(5742, -85)
+position = Vector2(5742, -74)
 rotation = 3.14159
 script = ExtResource("2_q335u")
 trigger_distance_x = 200.0
@@ -265,50 +227,26 @@ rotation = -3.14159
 points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
 default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
 
-[node name="Toilet15" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6170, -85)
-rotation = 3.14159
-script = ExtResource("2_q335u")
-trigger_distance_x = 200.0
-drop_amount = 350.0
-drop_speed = 3000.0
-player_path = NodePath("")
-
-[node name="Line2D3" type="Line2D" parent="Toilet15"]
-z_index = 5
-position = Vector2(6.00013, -474)
-rotation = -3.14159
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
-[node name="Toilet55" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6590, 500)
-script = ExtResource("2_q335u")
-trigger_distance_x = 200.0
-drop_amount = 350.0
-drop_speed = 3000.0
-player_path = NodePath("")
-
-[node name="Toilet18" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6590, -85)
-rotation = 3.14159
-script = ExtResource("2_q335u")
-trigger_distance_x = 200.0
-drop_amount = 350.0
-drop_speed = 3000.0
-player_path = NodePath("")
-
-[node name="Line2D3" type="Line2D" parent="Toilet18"]
-z_index = 5
-position = Vector2(6.00013, -474)
-rotation = -3.14159
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
 [node name="Toilet3" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(4672, 591)
 rotation = 3.14159
 scale = Vector2(1, -1)
+
+[node name="Toilet32" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3306, -74)
+rotation = 3.14159
+script = ExtResource("4_wkip5")
+trigger_distance_x = 150.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D4" type="Line2D" parent="Toilet32"]
+z_index = 5
+position = Vector2(-2, -468)
+rotation = -3.14159
+points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
 
 [node name="Toilet46" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(4881, -84)
@@ -326,128 +264,6 @@ rotation = -3.14159
 points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
 default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
 
-[node name="Toilet69" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7854, 228)
-script = ExtResource("4_wkip5")
-trigger_distance_x = 150.0
-drop_amount = 350.0
-drop_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Toilet70" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7854, -232)
-rotation = 3.14159
-script = ExtResource("4_wkip5")
-trigger_distance_x = 150.0
-drop_amount = 350.0
-drop_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Line2D4" type="Line2D" parent="Toilet70"]
-z_index = 5
-position = Vector2(-1.9982, -616)
-rotation = -3.14159
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
-[node name="Toilet76" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8694, 176)
-script = ExtResource("4_wkip5")
-trigger_distance_x = 150.0
-drop_amount = 350.0
-drop_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Toilet77" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8694, -284)
-rotation = 3.14159
-script = ExtResource("4_wkip5")
-trigger_distance_x = 150.0
-drop_amount = 350.0
-drop_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Line2D4" type="Line2D" parent="Toilet77"]
-z_index = 5
-position = Vector2(4.00149, -685)
-rotation = -3.14159
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
-[node name="Toilet72" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8274, 142)
-script = ExtResource("4_wkip5")
-trigger_distance_x = 150.0
-drop_amount = 350.0
-drop_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Toilet73" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8274, -318)
-rotation = 3.14159
-script = ExtResource("4_wkip5")
-trigger_distance_x = 150.0
-drop_amount = 350.0
-drop_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Line2D4" type="Line2D" parent="Toilet73"]
-z_index = 5
-position = Vector2(-4.99847, -701)
-rotation = -3.14159
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
-[node name="Toilet67" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8064, 787)
-script = ExtResource("3_q335u")
-trigger_distance_x = 150.0
-up_amount = 350.0
-up_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Toilet68" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8064, 327)
-rotation = 3.14159
-script = ExtResource("3_q335u")
-trigger_distance_x = 150.0
-up_amount = 350.0
-up_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Line2D4" type="Line2D" parent="Toilet68"]
-z_index = 5
-position = Vector2(0.999618, 50)
-rotation = -3.14159
-scale = Vector2(-1, -1)
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
-[node name="Toilet74" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8484, 759)
-script = ExtResource("3_q335u")
-trigger_distance_x = 150.0
-up_amount = 350.0
-up_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Toilet75" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8484, 299)
-rotation = 3.14159
-script = ExtResource("3_q335u")
-trigger_distance_x = 150.0
-up_amount = 350.0
-up_speed = 2000.0
-player_path = NodePath("")
-
-[node name="Line2D4" type="Line2D" parent="Toilet75"]
-z_index = 5
-position = Vector2(0.999618, 50)
-rotation = -3.14159
-scale = Vector2(-1, -1)
-points = PackedVector2Array(5, -429, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
 [node name="Toilet38" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(3832, 370)
 rotation = 3.14159
@@ -459,7 +275,12 @@ up_speed = 2000.0
 player_path = NodePath("")
 
 [node name="Toilet6" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6800, 641)
+position = Vector2(7144, 641)
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet7" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(8786, 684)
 rotation = 3.14159
 scale = Vector2(1, -1)
 
@@ -489,6 +310,10 @@ default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
 [node name="Toilet49" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(5301, 733)
 
+[node name="Toilet13A" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3076, -74)
+rotation = -3.14159
+
 [node name="Toilet16" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(780, 85)
 rotation = -3.14159
@@ -504,101 +329,6 @@ scale = Vector2(0.987785, 1)
 
 [node name="Toilet41" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(4042, 95)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet56" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6800, 160)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet8" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7010, 660)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet57" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7010, 150)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet9" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7220, 543)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet58" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7220, 84)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet10" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7430, 665)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet19" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(5522, 719)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet59" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7430, 206)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet21" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8905, 451)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet62" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(8905, -8)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet22" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(9063, 418)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet63" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(9063, -41)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet23" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(9213, 461)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet64" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(9213, 2)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet24" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(9367, 501)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet65" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(9367, 42)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet20" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7641, 633)
-rotation = 3.14159
-scale = Vector2(1, -1)
-
-[node name="Toilet61" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(7641, 123)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-
-[node name="Toilet60" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(5522, 89)
 rotation = -3.14159
 scale = Vector2(0.987785, 1)
 
@@ -624,23 +354,6 @@ scale = Vector2(1.01237, 1)
 points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
 default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
 
-[node name="Toilet53" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6380, 1094)
-scale = Vector2(0.987785, 1)
-script = ExtResource("5_kbbdq")
-trigger_distance_x = 200.0
-up_amount = 350.0
-up_speed = 3000.0
-player_path = NodePath("")
-
-[node name="Line2D6" type="Line2D" parent="Toilet53"]
-z_index = 5
-position = Vector2(4.0493, -485)
-rotation = -3.14159
-scale = Vector2(1.01237, 1)
-points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
-default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
-
 [node name="Toilet45" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(4462, 365)
 rotation = -3.14159
@@ -651,16 +364,6 @@ up_amount = 350.0
 up_speed = 2000.0
 player_path = NodePath("")
 
-[node name="Toilet54" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(6380, 550)
-rotation = -3.14159
-scale = Vector2(0.987785, 1)
-script = ExtResource("5_kbbdq")
-trigger_distance_x = 200.0
-up_amount = 350.0
-up_speed = 3000.0
-player_path = NodePath("")
-
 [node name="Toilet43" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(4042, 555)
 rotation = -3.14159
@@ -668,11 +371,6 @@ scale = Vector2(0.987785, -1)
 
 [node name="Toilet51" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(5737, 711)
-rotation = -3.14159
-scale = Vector2(0.987785, -1)
-
-[node name="Toilet52" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(5937, 711)
 rotation = -3.14159
 scale = Vector2(0.987785, -1)
 
@@ -693,6 +391,23 @@ scale = Vector2(1.01237, -1)
 points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
 default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
 
+[node name="Toilet31" parent="." instance=ExtResource("1_mr6ub")]
+position = Vector2(3076, 736)
+rotation = -3.14159
+scale = Vector2(1, -1)
+script = ExtResource("3_q335u")
+trigger_distance_x = 150.0
+up_amount = 350.0
+up_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Line2D6" type="Line2D" parent="Toilet31"]
+z_index = 5
+position = Vector2(-7.99998, -469)
+scale = Vector2(1, -1)
+points = PackedVector2Array(5, -429, 5.00012, -392.363, 5, -359, -38, -369, 5, -354, 44, -373)
+default_color = Color(0.608323, 1.11904e-06, 2.40654e-07, 1)
+
 [node name="Toilet11" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(5091, 700)
 rotation = -3.14159
@@ -700,10 +415,6 @@ scale = Vector2(1, -1)
 
 [node name="Toilet13" parent="." instance=ExtResource("1_mr6ub")]
 position = Vector2(5091, 0)
-rotation = -3.14159
-
-[node name="Toilet17" parent="." instance=ExtResource("1_mr6ub")]
-position = Vector2(5937, -5)
 rotation = -3.14159
 
 [node name="Toilet14" parent="." instance=ExtResource("1_mr6ub")]
