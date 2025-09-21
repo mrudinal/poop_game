@@ -5,11 +5,14 @@ extends Node2D
 @export var image_width: float = 1280.0
 
 # Earthquakes variables
-@export var quake_duration: float = 4.0           
-@export var quake_amplitude: float = 150.0
-@export var quake_hz: float = 2.0
-@export var quake_fade_s: float = 1.0             
+var quake_duration: float = 4.0           
+var quake_amplitude: float = 150.0
+var quake_hz: float = 2.0
+var quake_fade_s: float = 1.0             
 @export var shake_with_me: Array[NodePath] = []
+
+# Background moving speed ratio
+@export var parallax_ratio: float = 0.05  # 0 = world-fixed, 1 = locks to camera (foreground)
 
 # Everything moves with the background:
 var sprites: Array[Node2D] = []
@@ -21,6 +24,7 @@ var _cam: Camera2D
 var _view_w: float
 var _elapsed: float = 0.0
 var _base_x: float = 0.0
+var _cam_last_x: float = 0.0
 
 func _ready() -> void:
 	_base_x = position.x
@@ -31,6 +35,7 @@ func _ready() -> void:
 			sprites.append(c as Node2D)
 	sprites.sort_custom(func(a, b): return a.global_position.x < b.global_position.x)
 	_cam = get_viewport().get_camera_2d()
+	_cam_last_x = _cam.global_position.x
 	_view_w = float(get_viewport_rect().size.x)
 
 	# Resolve extra nodes to shake with background
@@ -44,6 +49,17 @@ func _process(delta: float) -> void:
 	_elapsed += delta
 	if _cam == null:
 		return
+	
+	# camera-based parallax (slower BG than player)
+	var cam_x := _cam.global_position.x
+	var cam_dx := cam_x - _cam_last_x
+	_cam_last_x = cam_x
+
+	# shift BG tiles opposite to camera motion by a fraction
+	if parallax_ratio != 0.0:
+		for s in sprites:
+			s.global_position.x += cam_dx * parallax_ratio
+
 
 	# Additional variables needed for earthquake
 	var quake_offset := 0.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cscboegqmv6t4"]
+[gd_scene load_steps=10 format=3 uid="uid://cscboegqmv6t4"]
 
 [ext_resource type="PackedScene" uid="uid://ddjv4axpwg04n" path="res://full_background.tscn" id="1_631su"]
 [ext_resource type="Script" uid="uid://cmqyyq3g56iae" path="res://root_stage_1.gd" id="1_h16f0"]
@@ -7,14 +7,22 @@
 [ext_resource type="Script" uid="uid://csiapr0m0k5pb" path="res://camera_2d.gd" id="4_631su"]
 [ext_resource type="PackedScene" uid="uid://cxp6qil5i4pg" path="res://background_music.tscn" id="7_h16f0"]
 [ext_resource type="PackedScene" uid="uid://de12jnv0pj7ka" path="res://poop_out.tscn" id="8_bbwhg"]
+[ext_resource type="Script" uid="uid://ksoxe2nvr1mu" path="res://variables.gd" id="8_xsjxg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h16f0"]
+radius = 120.0
 
 [node name="Stage 1" type="Node2D"]
 script = ExtResource("1_h16f0")
+stage_variables_path = NodePath("stage1_variables")
+player_path = NodePath("character_player")
+focus_marker_path = NodePath("character_player/FocusMarker/CollisionShape2D")
+music_player_path = NodePath("Background_Music/Music_stage_1")
 
 [node name="Full_Background" parent="." instance=ExtResource("1_631su")]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(534, 361)
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(530, 364)
 drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 0.0
@@ -28,6 +36,13 @@ script = ExtResource("2_631su")
 out_margin = 0.0
 ball_scene = ExtResource("8_bbwhg")
 spawn_offset_y = 0.0
+
+[node name="FocusMarker" type="Node2D" parent="character_player"]
+position = Vector2(4, 10)
+scale = Vector2(1.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="character_player/FocusMarker"]
+shape = SubResource("CircleShape2D_h16f0")
 
 [node name="player_image" type="Sprite2D" parent="character_player"]
 z_index = 10
@@ -44,3 +59,10 @@ scale = Vector2(2.68096, -2.87356)
 polygon = PackedVector2Array(22, 44, 23, -25, -8, -46, -43, -37, -26, 47)
 
 [node name="Background_Music" parent="." instance=ExtResource("7_h16f0")]
+
+[node name="stage1_variables" type="Node" parent="."]
+script = ExtResource("8_xsjxg")
+start_pos_x = 330.0
+start_pos_y = 364.0
+
+[editable path="Background_Music"]

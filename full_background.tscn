@@ -11,7 +11,7 @@ script = ExtResource("1_yj6ml")
 shake_with_me = Array[NodePath]([NodePath("../Toilets")])
 
 [node name="PoopBackground" type="Sprite2D" parent="Full_Background"]
-position = Vector2(661, 514)
+position = Vector2(581, 471)
 texture = ExtResource("1_4hvwq")
 
 [node name="PoopBackground2" type="Sprite2D" parent="Full_Background"]

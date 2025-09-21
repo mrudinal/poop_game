@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
-const SPEED = 250.0
-const JUMP_VELOCITY = -500.0
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const SPEED := 250.0
+const JUMP_VELOCITY := -500.0
+const QUAKE_DURATION := 4.0  # each quake lasts 4 seconds after its start
+
+var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity") as float
 
 @export var out_margin: float = 50.0
 @export var ball_scene: PackedScene
@@ -10,15 +12,18 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var spawn_point: Node2D = $player_image/PoopSpawnPoint
 @onready var player: Node2D = $player_image
 
-# --- NUEVO: control de "terremoto" ---
-@export var quake_start_s: float = 19.6     # segundo en el que inicia el terremoto
-@export var quake_end_s: float = 23.4        # segundo en el que termina el terremoto
-@export var quake_speed_mult: float = 1.6   # multiplicador de velocidad durante el terremoto
-var _elapsed: float = 0.0                   # tiempo transcurrido desde que cargó la escena
-var _quake_active: bool = false             # estado actual (para prints de depuración)
+# Terremoto (using Variables.quake_start_times)
+@export var quake_speed_mult: float = 1.6      # multiplicador de velocidad durante el terremoto
+var _elapsed: float = 0.0
+var _quake_active: bool = false
 
 var _cam: Camera2D
 var _half_h: float = 0.0
+
+func _enter_tree() -> void:
+	global_position = Vector2(Variables.start_pos_x, Variables.start_pos_y)  # snap before first frame
+	velocity = Vector2.ZERO
+	reset_physics_interpolation()
 
 func _ready() -> void:
 	_cam = get_viewport().get_camera_2d()
@@ -41,16 +46,23 @@ func _physics_process(delta):
 			print("character is at ", player.global_position)
 			print("spawned poop at ", ball.global_position)
 
-	# --- velocidad según ventana de terremoto ---
-	var in_quake_window := (_elapsed >= quake_start_s and _elapsed <= quake_end_s)
-	if in_quake_window and not _quake_active:
-		_quake_active = true
-		print("Quake START at ", _elapsed, "s (speed x", quake_speed_mult, ")")
-	elif not in_quake_window and _quake_active:
-		_quake_active = false
-		print("Quake END at ", _elapsed, "s (speed normal)")
+	# --- velocidad según ventanas de terremoto (usando Variables.quake_start_times) ---
+	var any_quake_active := false
+	if Variables and Variables.quake_start_times.size() > 0:
+		for t in Variables.quake_start_times:
+			if _elapsed >= t and _elapsed <= t + QUAKE_DURATION:
+				any_quake_active = true
+				break
 
-	var speed_now := SPEED * (quake_speed_mult if in_quake_window else 1.0)
+	# logs al entrar/salir de cualquier ventana
+	if any_quake_active and not _quake_active:
+		_quake_active = true
+		print("Quake START at ", snapped(_elapsed, 0.01), "s (speed x", quake_speed_mult, ")")
+	elif not any_quake_active and _quake_active:
+		_quake_active = false
+		print("Quake END at ", snapped(_elapsed, 0.01), "s (speed normal)")
+
+	var speed_now := SPEED * (quake_speed_mult if any_quake_active else 1.0)
 	velocity.x = speed_now
 
 	move_and_slide()
