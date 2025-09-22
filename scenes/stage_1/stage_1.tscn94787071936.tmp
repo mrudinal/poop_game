@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://cscboegqmv6t4"]
+
+[ext_resource type="PackedScene" uid="uid://ddjv4axpwg04n" path="res://full_background.tscn" id="1_631su"]
+[ext_resource type="Script" uid="uid://c0cm7rjg5b33k" path="res://character_player.gd" id="2_631su"]
+[ext_resource type="Texture2D" uid="uid://3y5q41k8nkfb" path="res://PIPOYA FREE 2D Game Character Sprites/Sigle Image/Witch/Character_color1/CharacterOnly/01idle/c00a_01idle_00.png" id="2_lce2v"]
+[ext_resource type="Script" uid="uid://csiapr0m0k5pb" path="res://camera_2d.gd" id="4_631su"]
+[ext_resource type="PackedScene" uid="uid://dgoa4r1m371sp" path="res://toilets.tscn" id="5_u5qfc"]
+[ext_resource type="Script" uid="uid://ctkorocp82218" path="res://toilet_down.gd" id="6_bvuje"]
+[ext_resource type="PackedScene" uid="uid://cxp6qil5i4pg" path="res://background_music.tscn" id="7_h16f0"]
+[ext_resource type="PackedScene" uid="uid://de12jnv0pj7ka" path="res://poop_out.tscn" id="8_bbwhg"]
+
+[node name="Stage 1" type="Node2D"]
+
+[node name="Full_Background" parent="." instance=ExtResource("1_631su")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(534, 361)
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+script = ExtResource("4_631su")
+target = NodePath("../character_player")
+
+[node name="character_player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(330, 364)
+script = ExtResource("2_631su")
+out_margin = 0.0
+ball_scene = ExtResource("8_bbwhg")
+spawn_offset_y = 0.0
+
+[node name="player_image" type="Sprite2D" parent="character_player"]
+z_index = 10
+position = Vector2(-1, 0)
+scale = Vector2(-0.373, 0.348)
+texture = ExtResource("2_lce2v")
+
+[node name="PoopSpawnPoint" type="Marker2D" parent="character_player/player_image"]
+position = Vector2(0, 135.057)
+rotation = 3.14159
+scale = Vector2(2.68096, -2.87356)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="character_player"]
+polygon = PackedVector2Array(22, 44, 23, -25, -8, -46, -43, -37, -26, 47)
+
+[node name="All Toilets" type="Node" parent="."]
+
+[node name="Toilet" parent="All Toilets" instance=ExtResource("5_u5qfc")]
+position = Vector2(1035, 394)
+script = ExtResource("6_bvuje")
+trigger_distance_x = 200.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet2" parent="All Toilets" instance=ExtResource("5_u5qfc")]
+position = Vector2(2335, -6)
+rotation = -3.14159
+script = ExtResource("6_bvuje")
+trigger_distance_x = 200.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet3" parent="All Toilets" instance=ExtResource("5_u5qfc")]
+position = Vector2(4639, 606)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Toilet4" parent="All Toilets" instance=ExtResource("5_u5qfc")]
+position = Vector2(1035, -107)
+rotation = -3.14159
+script = ExtResource("6_bvuje")
+trigger_distance_x = 200.0
+drop_amount = 350.0
+drop_speed = 2000.0
+player_path = NodePath("")
+
+[node name="Toilet5" parent="All Toilets" instance=ExtResource("5_u5qfc")]
+position = Vector2(1393, 719)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="Background_Music" parent="." instance=ExtResource("7_h16f0")]

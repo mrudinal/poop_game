@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpatk2e5gq5do"
+path="res://.godot/imported/Naturally Smelly.wav-4a71c2121127d9ef55be7a03ca5aace7.sample"
+
+[deps]
+
+source_file="res://music/First 3 stages/Naturally Smelly.wav"
+dest_files=["res://.godot/imported/Naturally Smelly.wav-4a71c2121127d9ef55be7a03ca5aace7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

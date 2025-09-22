@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddjv4axpwg04n"]
+
+[ext_resource type="Script" uid="uid://mv8e6tfb1o6j" path="res://scripts/stage1/full_background.gd" id="1_yj6ml"]
+[ext_resource type="Shader" uid="uid://dgyta1bv4jnrs" path="res://backgrounds/stage1/background_shader.gdshader" id="2_mgu8j"]
+[ext_resource type="Texture2D" uid="uid://5gpm48cp7oy2" path="res://backgrounds/stage1/poop_background_2.png" id="2_rwduo"]
+[ext_resource type="PackedScene" uid="uid://70w7grj8omyh" path="res://scenes/stage_1/All_Toilets.tscn" id="3_8y2al"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8q4da"]
+shader = ExtResource("2_mgu8j")
+shader_parameter/brightness = 0.9
+shader_parameter/contrast = 0.7
+
+[node name="Background_Toilets" type="Node2D"]
+
+[node name="Full_Background" type="Node2D" parent="."]
+script = ExtResource("1_yj6ml")
+shake_with_me = Array[NodePath]([NodePath("../Toilets")])
+
+[node name="PoopBackground" type="Sprite2D" parent="Full_Background"]
+material = SubResource("ShaderMaterial_8q4da")
+position = Vector2(652.5, 585.5)
+scale = Vector2(0.845703, 1.15137)
+texture = ExtResource("2_rwduo")
+
+[node name="PoopBackground5" type="Sprite2D" parent="Full_Background"]
+material = SubResource("ShaderMaterial_8q4da")
+position = Vector2(-641.5, 585.75)
+scale = Vector2(0.845703, 1.15088)
+texture = ExtResource("2_rwduo")
+
+[node name="PoopBackground2" type="Sprite2D" parent="Full_Background"]
+material = SubResource("ShaderMaterial_8q4da")
+position = Vector2(1966.5, 581.75)
+scale = Vector2(0.865234, 1.14893)
+texture = ExtResource("2_rwduo")
+
+[node name="PoopBackground3" type="Sprite2D" parent="Full_Background"]
+material = SubResource("ShaderMaterial_8q4da")
+position = Vector2(3265, 581.25)
+scale = Vector2(0.834635, 1.13818)
+texture = ExtResource("2_rwduo")
+
+[node name="PoopBackground4" type="Sprite2D" parent="Full_Background"]
+material = SubResource("ShaderMaterial_8q4da")
+position = Vector2(4557, 569.25)
+scale = Vector2(0.852865, 1.11084)
+texture = ExtResource("2_rwduo")
+
+[node name="Toilets" parent="." instance=ExtResource("3_8y2al")]

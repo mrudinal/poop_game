@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Variables="*res://stage1_variables.gd"
+Variables="*res://scripts/stage1/stage1_variables.gd"
 
 [display]
 

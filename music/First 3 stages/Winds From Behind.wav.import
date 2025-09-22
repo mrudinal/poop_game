@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cv5vbt4hdd4h"
+path="res://.godot/imported/Winds From Behind.wav-be6225c700783fcf4637d3094fa91f18.sample"
+
+[deps]
+
+source_file="res://music/First 3 stages/Winds From Behind.wav"
+dest_files=["res://.godot/imported/Winds From Behind.wav-be6225c700783fcf4637d3094fa91f18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://v0yf8mbfafxn"
+path="res://.godot/imported/Naturally Smelly.mp3-8f54124d2e49ac7c7675cbed3b7ac3aa.mp3str"
+
+[deps]
+
+source_file="res://music/First 3 stages/Naturally Smelly.mp3"
+dest_files=["res://.godot/imported/Naturally Smelly.mp3-8f54124d2e49ac7c7675cbed3b7ac3aa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

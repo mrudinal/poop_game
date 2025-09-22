@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://du4i8vq31bg4s"
+path="res://.godot/imported/Bathroom Boogie [music].mp3-5e7899abfa083d28644677bb178392e9.mp3str"
+
+[deps]
+
+source_file="res://music/First 3 stages/Bathroom Boogie [music].mp3"
+dest_files=["res://.godot/imported/Bathroom Boogie [music].mp3-5e7899abfa083d28644677bb178392e9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

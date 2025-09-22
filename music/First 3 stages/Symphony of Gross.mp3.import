@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://082jmboiahc2"
+path="res://.godot/imported/Symphony of Gross.mp3-ec32055c2b0cbb6609020e86bfc50747.mp3str"
+
+[deps]
+
+source_file="res://music/First 3 stages/Symphony of Gross.mp3"
+dest_files=["res://.godot/imported/Symphony of Gross.mp3-ec32055c2b0cbb6609020e86bfc50747.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

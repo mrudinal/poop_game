@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://de12jnv0pj7ka"]
+
+[ext_resource type="Texture2D" uid="uid://dbqwbdgn5ukju" path="res://assets/stage 1/poop.png" id="1_vxoqq"]
+[ext_resource type="Script" uid="uid://b4abqb86eheqb" path="res://scripts/stage1/poop_out.gd" id="2_jol3d"]
+
+[node name="poop_ball" type="Node2D"]
+z_index = 10
+position = Vector2(212, 141)
+
+[node name="Poop" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(-2.86102e-06, 4.29153e-06)
+scale = Vector2(0.0164654, 0.0125303)
+texture = ExtResource("1_vxoqq")
+script = ExtResource("2_jol3d")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Poop"]
+z_index = 10
+position = Vector2(0.00011218, -3.05176e-05)
+scale = Vector2(5.54816, 5.54815)
+
+[connection signal="screen_exited" from="Poop/VisibleOnScreenNotifier2D" to="Poop" method="_on_visible_on_screen_notifier_2d_screen_exited"]

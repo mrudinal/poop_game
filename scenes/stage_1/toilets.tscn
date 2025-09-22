@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgoa4r1m371sp"]
+
+[ext_resource type="Script" uid="uid://18onpnhq40in" path="res://scripts/stage1/toilet.gd" id="1_n12iw"]
+[ext_resource type="Shader" uid="uid://brdvf7arcdcro" path="res://scenes/stage_1/toilets.gdshader" id="2_f5da2"]
+[ext_resource type="Texture2D" uid="uid://bmfwnhhkeprxl" path="res://assets/stage 1/tall toilet.png" id="2_n12iw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w6vu4"]
+shader = ExtResource("2_f5da2")
+shader_parameter/brightness = 1.1
+shader_parameter/contrast = 1.3
+
+[node name="Toilet" type="Area2D"]
+position = Vector2(594, 294)
+script = ExtResource("1_n12iw")
+
+[node name="TallToilet" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_w6vu4")
+position = Vector2(0.75, 428)
+scale = Vector2(0.610825, 0.994444)
+texture = ExtResource("2_n12iw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-186.856, -266.956)
+scale = Vector2(0.732231, 1.04584)
+polygon = PackedVector2Array(237.433, 698.918, 294.792, 699.874, 288.734, 411.224, 291.652, 292.068, 312.137, 270.076, 320.331, 240.435, 325.794, 231.829, 321.697, 220.355, 285, 207, 269.801, 206.013, 273.898, 170.634, 254.778, 163.941, 222.001, 165.854, 198.785, 176.371, 176.934, 188.802, 176.934, 208.881, 182.397, 234.698, 206.979, 232.786, 209.71, 255.734, 239.755, 293.024, 235.013, 398.44)
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(52.7, 27.5)
+points = PackedVector2Array(-86, -69, -95, -97, -114, -96, -94, -98, -95, -107, -78, -123, -56, -125, -40, -116, -40, -97, -45, -81)
+default_color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

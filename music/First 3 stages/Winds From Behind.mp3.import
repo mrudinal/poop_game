@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpcvh1074cxwm"
+path="res://.godot/imported/Winds From Behind.mp3-ba34160d97a603da212650a5cd9592c0.mp3str"
+
+[deps]
+
+source_file="res://music/First 3 stages/Winds From Behind.mp3"
+dest_files=["res://.godot/imported/Winds From Behind.mp3-ba34160d97a603da212650a5cd9592c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
