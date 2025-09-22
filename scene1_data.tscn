@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4xlpsvuys7qs"]
+
+[ext_resource type="Script" uid="uid://csiapr0m0k5pb" path="res://camera_2d.gd" id="1_yq70b"]
+[ext_resource type="Script" uid="uid://dl4gjslu4hh16" path="res://timer_label.gd" id="2_0cwfe"]
+
+[node name="Camera" type="Camera2D"]
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0
+script = ExtResource("1_yq70b")
+target = NodePath("../character_player")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="TimerLabel" type="Label" parent="HUD"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 36
+text = "00.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_0cwfe")

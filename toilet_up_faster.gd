@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var trigger_distance_x: float = 200.0  # trigger when player is this close on the LEFT
+@export var trigger_distance_x: float = 210.0  # trigger when player is this close on the LEFT
 @export var up_amount: float = 350.0          # pixels to drop (down is +Y)
 @export var up_speed: float = 3000.0          # pixels/sec
 @export var player_path: NodePath              # optional; otherwise we find by group "player"

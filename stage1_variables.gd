@@ -1,14 +1,18 @@
 extends Node
 
-# Global variables for Stage 1:
+# Global variables for Stage 1
+# @export places the variable in Inspector
 @export var environment: String = "prod"
-@export var start_pos_x: float = 9600.0		# 330 is the real # 264,8571428571429 pixels for every second of music
-@export var start_pos_y: float = 480.0		# 364 is the real
+@export var start_pos_x: float = 330.0		# 330 is the real # 264,8571428571429 pixels for every second of music
+@export var start_pos_y: float = 364.0		# 364 is the real
+@export var music_starts: float = 0.0
 var quake_start_times: Array[float] = [19.6 - music_starts,66.4 - music_starts] 
 var blink_start_times: Array[float] = [23.6 - music_starts, 70.4 - music_starts]
 var final_focus: Array[float] = [31.6 - music_starts, 78.4 - music_starts]
-var pixels_by_music_second: float = 250
-var music_starts: float = (start_pos_x - 330)/pixels_by_music_second
+var time_elapsed_s: float = 0.0
+
+func timer_reset() -> void:
+	time_elapsed_s = 0.0
 
 # Reset after player loses:
 func reset():

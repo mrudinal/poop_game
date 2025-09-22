@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6vuvtxxvd3cx"
-path="res://.godot/imported/tall toilet.png-a48a1114588dd2da26435edea2885a93.ctex"
+uid="uid://c7ugtyqdl422f"
+path="res://.godot/imported/tall toilet png.png-e8e35953167aea8aa00b8f2fea28d67d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tall toilet.png"
-dest_files=["res://.godot/imported/tall toilet.png-a48a1114588dd2da26435edea2885a93.ctex"]
+source_file="res://tall toilet png.png"
+dest_files=["res://.godot/imported/tall toilet png.png-e8e35953167aea8aa00b8f2fea28d67d.ctex"]
 
 [params]
 

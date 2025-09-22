@@ -33,10 +33,9 @@ func _enter_tree() -> void:
 		Variables.environment = sv.environment
 		Variables.start_pos_x = sv.start_pos_x
 		Variables.start_pos_y = sv.start_pos_y
-		Variables.pixels_by_music_second = sv.pixels_by_music_second
+		Variables.music_starts = sv.music_starts
 
 		# Recompute derived values using the just-copied bases
-		Variables.music_starts = (Variables.start_pos_x - 330.0) / Variables.pixels_by_music_second
 		Variables.quake_start_times = [19.6 - Variables.music_starts, 66.4 - Variables.music_starts]
 		Variables.blink_start_times = [23.6 - Variables.music_starts, 70.4 - Variables.music_starts]
 		Variables.final_focus = [31.6 - Variables.music_starts, 78.4 - Variables.music_starts]

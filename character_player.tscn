@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://drud1uuhx6nuq"]
+
+[ext_resource type="Script" uid="uid://c0cm7rjg5b33k" path="res://character_player.gd" id="1_qvk5i"]
+[ext_resource type="PackedScene" uid="uid://de12jnv0pj7ka" path="res://poop_out.tscn" id="2_mc3e1"]
+[ext_resource type="Texture2D" uid="uid://by5u3ejta5f8u" path="res://sitting character.png" id="3_qvk5i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h16f0"]
+radius = 120.0
+
+[node name="character_player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_qvk5i")
+out_margin = 0.0
+ball_scene = ExtResource("2_mc3e1")
+spawn_offset_y = 0.0
+
+[node name="FocusMarker" type="Node2D" parent="."]
+position = Vector2(4, 10)
+scale = Vector2(1.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FocusMarker"]
+shape = SubResource("CircleShape2D_h16f0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+process_priority = 5
+position = Vector2(4, -4)
+scale = Vector2(1.10606, 1.06788)
+polygon = PackedVector2Array(22, 44, 23, -25, -8, -46, -43, -37, -26, 47)
+
+[node name="player_image" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(1, -4)
+scale = Vector2(-0.127998, 0.117949)
+texture = ExtResource("3_qvk5i")
+
+[node name="PoopSpawnPoint" type="Marker2D" parent="player_image"]
+position = Vector2(0, 135.057)
+rotation = 3.14159
+scale = Vector2(2.68096, -2.87356)

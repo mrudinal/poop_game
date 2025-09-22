@@ -9,8 +9,8 @@ position = Vector2(212, 141)
 
 [node name="Poop" type="Sprite2D" parent="."]
 z_index = 10
-position = Vector2(3.05176e-05, -0.999969)
-scale = Vector2(0.126168, 0.126168)
+position = Vector2(-2.86102e-06, 4.29153e-06)
+scale = Vector2(0.0164654, 0.0125303)
 texture = ExtResource("1_ejgtv")
 script = ExtResource("2_kdnha")
 

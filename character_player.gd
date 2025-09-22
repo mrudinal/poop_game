@@ -44,7 +44,8 @@ func _physics_process(delta):
 			ball.global_position = spawn_point.global_position
 			get_parent().add_child(ball)
 			print("character is at ", player.global_position)
-			print("spawned poop at ", ball.global_position)
+			var music_time := Variables.music_starts + Variables.time_elapsed_s
+			print("music time: ", "%06.3f" % music_time)  # e.g., 012.345
 
 	# --- velocidad según ventanas de terremoto (usando Variables.quake_start_times) ---
 	var any_quake_active := false
