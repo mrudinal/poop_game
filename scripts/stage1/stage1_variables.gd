@@ -6,6 +6,9 @@ extends Node
 @export var start_pos_x: float = 330.0		# 330 is the real # 264,8571428571429 pixels for every second of music
 @export var start_pos_y: float = 364.0		# 364 is the real
 @export var music_starts: float = 0.0
+# First chorus end: x=9871.026 y=533.1 music_starts=35.75
+# Second chorus start: x=16543.35 y=476.225 music_starts=62.431
+# Second chorus end: x=21435.4 y=403.4587 music_starts=79.609
 var quake_start_times: Array[float] = [19.6 - music_starts,66.4 - music_starts] 
 var blink_start_times: Array[float] = [23.6 - music_starts, 70.4 - music_starts]
 var final_focus: Array[float] = [31.6 - music_starts, 78.4 - music_starts]

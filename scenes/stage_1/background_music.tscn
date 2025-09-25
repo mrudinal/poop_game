@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxp6qil5i4pg"]
 
-[ext_resource type="AudioStream" uid="uid://082jmboiahc2" path="res://music/First 3 stages/Symphony of Gross.mp3" id="1_4m5bw"]
+[ext_resource type="AudioStream" uid="uid://b3n8xt8qwboev" path="res://music/First 3 stages/symphony of gross modified.wav" id="1_dvn54"]
 
 [node name="Background_Music" type="Node"]
 
 [node name="Music_stage_1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_4m5bw")
+stream = ExtResource("1_dvn54")
 volume_db = 4.0
